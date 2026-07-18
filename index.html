@@ -145,7 +145,17 @@ button{ font:inherit; background:none; border:none; color:inherit; cursor:pointe
 }
 .hud__promo[hidden]{ display:none; }
 .hud__promo:hover{ background:var(--gold); color:var(--bg-void); }
+@media (max-width: 768px){
+  .hud__promo{
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
+  .hud__hint{
+    bottom: 20px;
+  }
+}
 .promo-modal{ position:fixed; inset:0; z-index:9997; visibility:hidden; pointer-events:none; }
 .promo-modal.is-open{ visibility:visible; pointer-events:auto; }
 .promo-modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.55); opacity:0; transition:opacity .35s ease; }
